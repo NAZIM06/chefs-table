@@ -2,9 +2,10 @@ import React from 'react';
 
 const AboutUs = () => {
     return (
-        <div>
+        <>
+        <div className='h-screen'>
             <p>this is about us</p>
-        </div>
+        </div></>
     );
 };
 

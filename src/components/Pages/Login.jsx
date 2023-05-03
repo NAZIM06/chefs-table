@@ -37,7 +37,7 @@ const Login = () => {
                 <FcGoogle className='h-6 w-6' />
                 <p className='font-semibold mx-auto'>Continue with Google</p>
             </div>
-            <div className='flex w-10/12 rounded-3xl mx-auto p-2 mb-2 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
+            <div className='flex w-10/12 rounded-3xl mx-auto p-2 mb-5 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
                 <FaGithub className='h-6 w-6' />
                 <p className='font-semibold mx-auto'>Continue with Github</p>
             </div>
