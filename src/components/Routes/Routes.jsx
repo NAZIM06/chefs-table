@@ -29,7 +29,7 @@ const route = createBrowserRouter([
             },
             {
                 path: 'register',
-                element: <Register />
+                element: <Register/>
             },
             {
                 path: 'blog',

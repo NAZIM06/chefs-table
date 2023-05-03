@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { HiOutlineUserCircle } from "react-icons/hi";
+import Tools from "./Tools";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,6 +10,19 @@ const Header = () => {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
+    const { user, signOutUser } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+
+            })
+            .catch(error => {
+                const errorMessage = error.message;
+                console.log(errorMessage)
+            })
+    }
+
 
     return (
         <nav className="bg-white">
@@ -28,9 +44,13 @@ const Header = () => {
                             <NavLink to="/aboutus" className="text-orange-700">
                                 About Us
                             </NavLink>
-                            <button className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md">
-                                <Link to="/login">Login</Link>
-                            </button>
+                            {
+                                user ? <div className='flex items-center space-x-2 md:space-x-4'>
+                                    <Tools text={user.displayName}>{user.photoURL ? <img className='rounded-full h-6 w-6' src={user.photoURL} alt="" /> : <HiOutlineUserCircle className='h-8 w-8' />}</Tools>
+                                    <button onClick={handleSignOut} className='bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md'>Sign Out</button>
+                                </div> : <Link to='/login'><button className='bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md'>Login</button></Link>
+                            }
+
                         </div>
                     </div>
 
@@ -83,6 +103,12 @@ const Header = () => {
             {isMenuOpen && (
                 <div className="md:hidden" id="mobile-menu">
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                    {
+                                user ? <div className='flex items-center space-x-2 md:space-x-4'>
+                                    <Tools text={user.displayName}>{user.photoURL ? <img className='rounded-full h-6 w-6' src={user.photoURL} alt="" /> : <HiOutlineUserCircle className='h-8 w-8' />}</Tools>
+                                    <button onClick={handleSignOut} className='bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md'>Sign Out</button>
+                                </div> : <Link to='/login'><button className='bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md'>Login</button></Link>
+                            }
                         <NavLink
                             to="/"
                             className="block px-3 py-2 rounded-md text-base font-medium  text-orange-700 hover:text-white hover:bg-gray-700"
@@ -101,9 +127,7 @@ const Header = () => {
                         >
                             About Us
                         </NavLink>
-                        <button className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md">
-                                <Link to="/login">Login</Link>
-                            </button>
+                        
                     </div>
                 </div>
             )}
