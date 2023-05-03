@@ -1,6 +1,6 @@
 import React from 'react'
 import Lottie from 'lottie-react'
-import reader from '../../assets/hiring-pt-2.json'
+import reader from '../../../assets/120972-chef.json'
 import { Link } from 'react-router-dom'
 
 const Banner = () => {
@@ -11,20 +11,13 @@ const Banner = () => {
         <div className='max-w-xl mb-6 lg:mt-8'>
           <div>
           </div>
-          <h2 className='max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-gray-900 sm:text-4xl'>
-            One Step <br/> Closer To Your<br /> 
-            <span className='inline-block text-blue-400'>Dream Job</span>
+          <h2 className='max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-red-600 sm:text-4xl'>
+            Meet, Eat<br/> &<br /> 
+            <span className='inline-block text-orange-400'>Enjoy The Food</span>
           </h2>
           <p className='text-base text-gray-700 md:text-lg'>
-          Explore thousands of job opportunities with all the information you need. Its your future. Come find it. Manage all your job application from start to finish.
+          Welcome to our restaurant where every dish is made with the freshest ingredients and bursting with flavors that will make your taste buds dance with joy.Come dine with us and experience the magic of our good food for yourself.
           </p>
-        </div>
-        <div className='flex flex-col items-center md:flex-row'>
-          <Link to='/' className='btn md:w-auto md:mr-4'>
-            <div className='inline-flex items-center justify-center w-full h-full'>
-              <p className='mr-3'>Get Started</p>
-            </div>
-          </Link>
         </div>
       </div>
       {/* Lottie Animation */}

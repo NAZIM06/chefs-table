@@ -1,10 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
+import Chef from './Chef';
 
 const Home = () => {
     return (<>
-        <div className='h-screen'>
+        <div>
             <Banner></Banner>
+            <Chef></Chef>
         </div>
         </>
     );
