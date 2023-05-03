@@ -19,16 +19,16 @@ const Header = () => {
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex font-semibold items-baseline space-x-4 text-lg">
-                            <NavLink to="/" className="hover:text-blue-400 text-black">
+                            <NavLink to="/" className=" text-orange-700">
                                 Home
                             </NavLink>
-                            <NavLink to="/blog" className="hover:text-blue-400 text-black">
+                            <NavLink to="/blog" className=" text-orange-700">
                                 Blog
                             </NavLink>
-                            <NavLink to="/aboutus" className="hover:text-blue-400 text-black">
+                            <NavLink to="/aboutus" className="text-orange-700">
                                 About Us
                             </NavLink>
-                            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                            <button className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md">
                                 <Link to="/login">Login</Link>
                             </button>
                         </div>
@@ -85,23 +85,23 @@ const Header = () => {
                     <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                         <NavLink
                             to="/"
-                            className="block px-3 py-2 rounded-md text-base font-medium  text-gray-800 hover:text-white hover:bg-gray-700"
+                            className="block px-3 py-2 rounded-md text-base font-medium  text-orange-700 hover:text-white hover:bg-gray-700"
                         >
                             Home
                         </NavLink>
                         <NavLink
                             to="/blog"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-white hover:bg-gray-700"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-orange-700 hover:text-white hover:bg-gray-700"
                         >
                             Blog
                         </NavLink>
                         <NavLink
-                            to="/"
-                            className="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:text-white hover:bg-gray-700"
+                            to="/aboutus"
+                            className="block px-3 py-2 rounded-md text-base font-medium text-orange-700 hover:text-white hover:bg-gray-700"
                         >
                             About Us
                         </NavLink>
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md">
+                        <button className="bg-orange-400 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-md">
                                 <Link to="/login">Login</Link>
                             </button>
                     </div>

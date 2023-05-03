@@ -21,7 +21,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input type="text" placeholder="Photo url" className="input input-bordered" />
+                            <input type="url" placeholder="Photo url" className="input input-bordered" />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -38,8 +38,8 @@ const Register = () => {
                                 <p className='label-text'>Already have an account? <Link to='/login'><span className='label-text link-hover text-blue-600'>Login</span></Link></p>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Submit</button>
+                        <div className="form-control mt-1">
+                            <button className="text-center text-white font-semibold text-lg bg-orange-400 w-10/12 rounded-3xl mx-auto p-2 my-3 hover:bg-orange-500 cursor-pointer">Submit</button>
                         </div>
                     </div>
                 </div>
