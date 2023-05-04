@@ -6,10 +6,10 @@ const Footer = () => {
     return (
         <footer className="footer p-3 bg-base-300 text-base-content  flex flex-col  md:flex-row items-center justify-around">
             <div>
-            <img className='h-20' src="https://cdn.pixabay.com/photo/2014/03/25/16/55/restaurant-297619_960_720.png" alt="" />
+                <img className='h-20' src="https://cdn.pixabay.com/photo/2014/03/25/16/55/restaurant-297619_960_720.png" alt="" />
                 <Link to="/" className="text-lime-600 text-3xl font-bold">
-                CHEF'S <span className="text-orange-400">TABLE</span>
-            </Link>
+                    CHEF'S <span className="text-orange-400">TABLE</span>
+                </Link>
             </div>
             <div className=''><p>Copyright © 2023 - All right reserved by CHEF'S TABLE</p></div>
             <div>

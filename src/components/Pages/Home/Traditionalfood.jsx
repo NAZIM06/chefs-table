@@ -5,14 +5,14 @@ import { AuthContext } from '../../Provider/AuthProvider';
 
 const Traditionalfood = () => {
     const [traditionalFood, setTraditionalFood] = useState([]);
-    const {setLoading} = useContext(AuthContext)
+    const { setLoading } = useContext(AuthContext)
 
-    useEffect(()=>{
+    useEffect(() => {
         fetch('https://chefs-table-server-psi.vercel.app/traditionalFood')
-        .then(res=> res.json())
-        .then(data => setTraditionalFood(data))
+            .then(res => res.json())
+            .then(data => setTraditionalFood(data))
         setLoading(false)
-    },[])
+    }, [])
 
     return (
         <div className='w-full my-20'>
@@ -20,8 +20,8 @@ const Traditionalfood = () => {
             <div className="flex flex-wrap justify-center">
                 {
                     traditionalFood.map(tf => <Traditionalcard
-                    tf={tf}
-                    key={tf.id}
+                        tf={tf}
+                        key={tf.id}
                     ></Traditionalcard>)
                 }
             </div>

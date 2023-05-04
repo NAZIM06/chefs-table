@@ -13,15 +13,15 @@ const Tools = ({ text, children }) => {
 
     return (
         <div className="relative">
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            {children}
-        </div>
-        {hover &&
-            <div className="absolute top-full text-xs text-center font-normal transform  -translate-x-1/2 bg-white text-gray-700 p-2 rounded-md">
-                {text}
+            <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                {children}
             </div>
-        }
-    </div>
+            {hover &&
+                <div className="absolute top-full text-xs text-center font-normal transform  -translate-x-1/2 bg-white text-gray-700 p-2 rounded-md">
+                    {text}
+                </div>
+            }
+        </div>
     );
 };
 

@@ -9,6 +9,6 @@ import AuthProvider from './components/Provider/AuthProvider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <AuthProvider>
-  <RouterProvider router={route}/>
-</AuthProvider>
+    <RouterProvider router={route} />
+  </AuthProvider>
 )

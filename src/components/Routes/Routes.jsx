@@ -22,8 +22,8 @@ const route = createBrowserRouter([
             },
             {
                 path: 'chefRecipe/:id',
-                element: <PrivateRoute><ChefRecipe/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://chefs-table-server-psi.vercel.app/recipe/${params.id}`)
+                element: <PrivateRoute><ChefRecipe /></PrivateRoute>,
+                loader: ({ params }) => fetch(`https://chefs-table-server-psi.vercel.app/recipe/${params.id}`)
             },
             {
                 path: 'login',
@@ -31,7 +31,7 @@ const route = createBrowserRouter([
             },
             {
                 path: 'register',
-                element: <Register/>
+                element: <Register />
             },
             {
                 path: 'blog',

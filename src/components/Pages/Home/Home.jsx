@@ -12,7 +12,7 @@ const Home = () => {
             <Traditionalfood></Traditionalfood>
             <Extrasection></Extrasection>
         </div>
-        </>
+    </>
     );
 };
 
