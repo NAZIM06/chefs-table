@@ -2,18 +2,17 @@ import React from 'react';
 import { AiOutlineDownload } from "react-icons/ai";
 import html2pdf from 'html2pdf.js';
 
-
 const Blog = () => {
 
     const downloadAsPdf = () => {
-        const element = document.getElementById('blog');
+        const url = window.location.href;
         const options = {
-            margin: 0.5,
-            filename: 'blog.pdf',
-            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+          margin: 0.5,
+          filename: 'blog.pdf',
+          jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
         };
-        html2pdf().set(options).from(element).save();
-    };
+        html2pdf().set(options).from(url).save();
+      };
     return (
         <>
             <div className='py-10 mx-0'>

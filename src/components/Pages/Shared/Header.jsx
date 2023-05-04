@@ -25,23 +25,23 @@ const Header = () => {
 
 
     return (
-        <nav className="bg-white">
+        <nav className=" container mx-auto">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <div className="flex items-center">
                         <Link to="/" className="text-lime-600 text-3xl font-bold">
-                            CHEF'S <span className="text-orange-400">TABLE</span>
+                            CHEF'S <span className="text-orange-500">TABLE</span>
                         </Link>
                     </div>
                     <div className="hidden md:block">
                         <div className="ml-10 flex font-semibold items-baseline space-x-4 text-lg">
-                            <NavLink to="/" className=" text-orange-700">
+                            <NavLink to="/" className="text-gray-500">
                                 Home
                             </NavLink>
-                            <NavLink to="/blog" className=" text-orange-700">
+                            <NavLink to="/blog" className=" text-gray-500">
                                 Blog
                             </NavLink>
-                            <NavLink to="/aboutus" className="text-orange-700">
+                            <NavLink to="/aboutus" className="text-gray-500">
                                 About Us
                             </NavLink>
                             {

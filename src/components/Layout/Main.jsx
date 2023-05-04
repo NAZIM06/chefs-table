@@ -2,7 +2,8 @@ import React from 'react';
 import Header from '../Pages/Shared/Header';
 import { Outlet } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer';
-// import { Toaster } from 'react-hot-toast'
+import { Toaster } from 'react-hot-toast';
+
 
 const Main = () => {
     return (
@@ -10,8 +11,11 @@ const Main = () => {
             <Header></Header>
             <div className="">
                 <Outlet></Outlet>
+                <Toaster position="top-center"
+                    reverseOrder={false} />
             </div>
-            
+            {/* toast.success('Successfully toasted!') */}
+
             <Footer></Footer>
 
         </>

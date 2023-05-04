@@ -15,7 +15,7 @@ const Banner = () => {
             Meet, Eat<br/> &<br /> 
             <span className='inline-block text-orange-400'>Enjoy The Food</span>
           </h2>
-          <p className='text-base text-gray-700 md:text-lg'>
+          <p className='text-base text-gray-700 md:text-lg font-serif'>
           Welcome to our restaurant where every dish is made with the freshest ingredients and bursting with flavors that will make your taste buds dance with joy.Come dine with us and experience the magic of our good food for yourself.
           </p>
         </div>

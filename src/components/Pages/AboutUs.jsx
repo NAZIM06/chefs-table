@@ -4,7 +4,7 @@ const AboutUs = () => {
     return (
         <>
         <div className='h-screen'>
-            <p>this is about us</p>
+            <h1>comming soon...</h1>
         </div></>
     );
 };
