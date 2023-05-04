@@ -6,8 +6,8 @@ const Banner = () => {
   return (
     <div className='my-container flex flex-col items-center justify-between lg:flex-row'>
       {/* Text Content */}
-      <div className='mb-10 flex justify-between lg:pr-5 lg:mb-0'>
-        <div className='max-w-xl mb-6 lg:mt-8'>
+      <div className='mb-10 flex justify-between lg:mb-0'>
+        <div className='max-w-lg mb-6 lg:mt-8'>
           <h2 className='text-5xl font-bold mb-5 text-red-600'>
             Meet, Eat<br /> &<br />
             <span className='inline-block text-orange-400'>Enjoy The Food</span>
@@ -18,8 +18,8 @@ const Banner = () => {
         </div>
       </div>
       {/* Lottie Animation */}
-      <div className=''>
-        <div className='w-4/5'>
+      <div className='ml-6'>
+        <div className='w-3/5 mx-auto'>
           <Lottie animationData={reader} loop={true} />
         </div>
       </div>

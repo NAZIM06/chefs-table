@@ -8,9 +8,9 @@ const Recipe = ({ recipe }) => {
 
   const handleFavorite = () => {
     if (isFavorite) {
-      toast(`"${recipeName}" is removed from your favorite recipes`);
+      toast.error(`"${recipeName}" is removed from your favorite recipes.`);
     } else {
-      toast(`"${recipeName}" is added to your favorite recipes`);
+      toast.success(`"${recipeName}" is added to your favorite recipes.`);
     }
     setIsFavorite(!isFavorite);
   };
@@ -20,7 +20,7 @@ const Recipe = ({ recipe }) => {
         <div>
           <h1 className="text-3xl text-center font-bold">Recipe Name: {recipeName}</h1>
           <div className='flex items-center'>
-            <div className='flex'>
+            <div className='flex w-11/12 mr-8'>
               <p className="py-6 font-bold w-7/12 ml-7">Ingredients : <span className='font-normal'>
                 {ingredients.map((ingredient, index) => (
                   <li key={recipe.id + index}>{ingredient}</li>

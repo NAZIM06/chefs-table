@@ -4,6 +4,7 @@ import { AuthContext } from '../Provider/AuthProvider';
 import Loader from './Shared/Loader';
 
 const Register = () => {
+
     const { createUser, setUser, loading, setLoading } = useContext(AuthContext);
     const [error, setError] = useState('')
     const navigate = useNavigate();
@@ -41,53 +42,37 @@ const Register = () => {
                     console.log(errorMessage)
                 })
         }
+        // console.log(event.target.email.value)
     }
+
     return (
-        <>{
-            loading && <Loader />
-        }
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse w-3/5">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
-                        <p className="py-6">Have you taken a look at our Signature Series yet? Every Friday we release a brand new masterclass from one of our chefs, where they'll show you how to recreate their favourite dishes at home.</p>
+        <>
+            {
+                loading && <Loader />
+            }
+            <div className='mx-auto p-10 w-5/12 '>
+                <form onSubmit={handleSubmit} className='p-10 bg-base-200 rounded-md border-2'>
+                    <p className='text-xl font-bold text-black mb-5'>Register</p>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email">Name</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="text" name="name" placeholder='name' />
                     </div>
-                    <form onSubmit={handleSubmit} className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <div className="card-body">
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input type="text" placeholder="Name" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input type="url" placeholder="Photo url" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input type="email" placeholder="email" className="input input-bordered" />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="password" placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <p className='label-text'>Already have an account? <Link to='/login'><span className='label-text link-hover text-blue-600'>Login</span></Link></p>
-                                </label>
-                            </div>
-                            <div className="form-control mt-1">
-                                <p className='text-red-700 mt-3'>{error}</p>
-                                <button className="text-center text-white font-semibold text-lg bg-orange-400 w-10/12 rounded-3xl mx-auto p-2 my-3 hover:bg-orange-500 cursor-pointer">Submit</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email">Photo URL</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="text" name="photoUrl" placeholder='Photo url' />
+                    </div>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email"> Email</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="email" name="email" required placeholder='Email' />
+                    </div>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email">Password</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="password" name="password" required placeholder='password' />
+                    </div>
+                    <p className='text-red-700 mt-3'>{error}</p>
+                    <button className='bg-btn-color w-full py-3 text-xl rounded-md my-5 font-bold'>Register</button>
+                    <p className='text-center'>Already have an account? <Link to='/login'><span className='text-btn-color underline'>Login</span></Link></p>
+                </form>
             </div>
         </>
     );

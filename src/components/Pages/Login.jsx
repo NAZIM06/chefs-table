@@ -67,46 +67,31 @@ const Login = () => {
     }
     return (
         <>
-        
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse w-3/5">
-                    <div className="text-center lg:text-left ml-5">
-                        <h1 className="text-5xl font-bold">Login now!</h1>
-                        <p className="py-6">Have you taken a look at our Signature Series yet? Every Friday we release a brand new masterclass from one of our chefs, where they'll show you how to recreate their favourite dishes at home.</p>
+            {
+                loading && <Loader />
+            }
+            <div className='mx-auto p-10 w-5/12 '>
+                <form onSubmit={handleSubmit} className='p-10 bg-base-200 rounded-md border-2'>
+                    <p className='text-xl font-bold text-black mb-7'>Login</p>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email">Username or Email</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="email" name="email" required placeholder='Username or Email' />
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-                        <form onSubmit={handleSubmit}>
-                            <div className="card-body">
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Email</span>
-                                    </label>
-                                    <input type="email" placeholder="email" className="input input-bordered" />
-                                </div>
-                                <div className="form-control">
-                                    <label className="label">
-                                        <span className="label-text">Password</span>
-                                    </label>
-                                    <input type="password" placeholder="password" className="input input-bordered" />
-                                    <label className="label">
-                                        <p className='label-text'>Don't have an account? <Link to='/register'><span className='label-text link-hover text-blue-600'>Create Account</span></Link></p>
-                                    </label>
-                                </div>
-                                <div className="form-control mt-1">
-                                {error && <p className='text-red-700 mt-3'>{error}</p>}
-                                    <button type="submit" className="text-center text-white font-semibold text-lg bg-orange-400 w-10/12 rounded-3xl mx-auto p-2 my-2 hover:bg-orange-500 cursor-pointer ">Login</button>
-                                </div>
-                            </div>
-                        </form>
-                        <div onClick={handleGoogleSignIn} className='flex w-10/12 rounded-3xl mx-auto p-2 my-1 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
-                            <FcGoogle className='h-6 w-6' />
-                            <p className='font-semibold mx-auto'>Continue with Google</p>
-                        </div>
-                        <div onClick={handleGithubLogin} className='flex w-10/12 rounded-3xl mx-auto p-2 mb-5 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
-                            <FaGithub className='h-6 w-6' />
-                            <p className='font-semibold mx-auto'>Continue with Github</p>
-                        </div>
+                    <div className="flex flex-col">
+                        <label className=" text-black font-semibold py-3" htmlFor="email">Password</label>
+                        <input className="outline-none border-2 border-gray-300 rounded-md p-2 focus:border-gray-500" type="password" name="password" required placeholder='password' />
                     </div>
+                    <p className='text-red-700 mt-3'>{error}</p>
+                    <button className='bg-btn-color w-full py-3 text-xl rounded-md my-5 font-bold'>Login</button>
+                    <p className='text-center'>Don't have an account? <Link to='/register'><span className='text-btn-color underline'>Create Account</span></Link></p>
+                </form>
+                <div onClick={handleGoogleSignIn} className='flex w-10/12 rounded-3xl mx-auto p-2 my-1 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
+                    <FcGoogle className='h-6 w-6' />
+                    <p className='font-semibold mx-auto'>Continue with Google</p>
+                </div>
+                <div onClick={handleGithubLogin} className='flex w-10/12 rounded-3xl mx-auto p-2 mb-5 justify-between items-center hover:bg-orange-400 hover:text-white cursor-pointer border-2'>
+                    <FaGithub className='h-6 w-6' />
+                    <p className='font-semibold mx-auto'>Continue with Github</p>
                 </div>
             </div>
         </>

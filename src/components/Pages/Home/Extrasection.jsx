@@ -21,7 +21,7 @@ const Extrasection = () => {
               <label className="label">
                 <span className="label-text">Tell us what you want?</span>
               </label>
-              <textarea placeholder="description" className="border-2 rounded-md w-full px-3 py-2 h-48"></textarea>
+              <textarea placeholder="description" className="border-2 rounded-md w-full px-3 py-2 h-30"></textarea>
             </div>
             <div className="form-control mt-6">
               <button className="button m-auto">Submit</button>
