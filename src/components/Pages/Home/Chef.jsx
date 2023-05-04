@@ -18,9 +18,9 @@ const Chef = () => {
        <div className='mt-8'>
        <h1 className="text-3xl font-bold mb-4 text-center ">Our Chef's</h1>
        </div>
-        <div className='w-full grid sm:grid-cols-1 md:grid-cols-3 gap-4 right-0 my-10'>
+        <div className='flex flex-wrap justify-center'>
             {
-                chef.map(chef => <ChefCard
+                chef.map(chef => <ChefCard 
                     chef={chef}
                     key={chef.id}
                 ></ChefCard>)

@@ -17,7 +17,7 @@ const Traditionalfood = () => {
     return (
         <div className='w-full my-20'>
             <p className='mb-12 text-2xl text-center font-bold'>Our Traditional Foods</p>
-            <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="flex flex-wrap justify-center">
                 {
                     traditionalFood.map(tf => <Traditionalcard
                     tf={tf}
