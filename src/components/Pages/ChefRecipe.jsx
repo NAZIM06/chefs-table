@@ -2,6 +2,7 @@ import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Recipe from './Recipe';
 import { AiFillLike} from "react-icons/ai";
+import LazyLoad from 'react-lazyload';
 
 const ChefRecipe = () => {
     const data = useLoaderData();
@@ -18,7 +19,7 @@ const ChefRecipe = () => {
                 <p className='font-bold'>Bio : <span className='font-normal'>{shortBio}</span></p>
                 <p className='font-bold flex mt-5 '><AiFillLike className='h-6 w-6 mx-2'/>{numberOfLikes} Likes</p>
             </div>
-            <div><img className='w-full object-cover object-center rounded-r-xl' src={chefPicture} alt="" /></div>
+            <div><LazyLoad threshold={.90}  height={762}><img className='w-full object-cover object-center rounded-r-xl' src={chefPicture} alt="" /></LazyLoad></div>
         </div>
         <p className='text-3xl font-bold text-center mt-16 mb-10'>{chefName} Recipes</p>
         <div className="grid grid-cols-1 gap-4 my-10">
