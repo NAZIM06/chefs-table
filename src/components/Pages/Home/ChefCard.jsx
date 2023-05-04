@@ -13,20 +13,20 @@ const ChefCard = ({ chef }) => {
                     <figure className="rounded-lg overflow-hidden">
 
                         <img className="h-64 w-full object-cover" src={chefPicture} alt="Example" />
-                    </LazyLoad>
-                    <figcaption className="p-4 bg-white ">
-                        <h2 className="text-lg font-bold mb-4 leading-tight text-gray-800">{chefName}</h2>
-                        <p className='font-semibold'>Years of experience : <span className='font-normal'>{yearOfExperience} years</span></p>
-                        <p className='font-semibold'>Number of Recipes : <span className='font-normal'>{numberOfRecipes} Recipes</span></p>
-                        <div className="mt-5 mb-0 flex justify-between items-center">
-                            <p className='font-semibold'>Likes: <span className='font-normal'>{numberOfLikes}</span></p>
-                            <Link to={`/chefRecipe/${id}`}><button className="bg-btn-color py-2 px-4 rounded-md font-semibold flex items-center">View Recipes<FaChevronCircleRight className='h-5 w-5 ml-2' /></button></Link>
-                        </div>
-                    </figcaption>
-                </figure>
 
-            </Link>
-        </div >
+                        <figcaption className="p-4 bg-white ">
+                            <h2 className="text-lg font-bold mb-4 leading-tight text-gray-800">{chefName}</h2>
+                            <p className='font-semibold'>Years of experience : <span className='font-normal'>{yearOfExperience} years</span></p>
+                            <p className='font-semibold'>Number of Recipes : <span className='font-normal'>{numberOfRecipes} Recipes</span></p>
+                            <div className="mt-5 mb-0 flex justify-between items-center">
+                                <p className='font-semibold'>Likes: <span className='font-normal'>{numberOfLikes}</span></p>
+                                <Link to={`/chefRecipe/${id}`}><button className="bg-btn-color py-2 px-4 rounded-md font-semibold flex items-center">View Recipes<FaChevronCircleRight className='h-5 w-5 ml-2' /></button></Link>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                </Link>
+            </div >
         </>
     );
 };

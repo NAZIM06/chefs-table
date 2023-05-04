@@ -67,9 +67,7 @@ const Login = () => {
     }
     return (
         <>
-            {
-                loading && <Loader />
-            }
+        
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse w-3/5">
                     <div className="text-center lg:text-left ml-5">
@@ -95,7 +93,7 @@ const Login = () => {
                                     </label>
                                 </div>
                                 <div className="form-control mt-1">
-                                    <p className='text-red-700 mt-3'>{error}</p>
+                                {error && <p className='text-red-700 mt-3'>{error}</p>}
                                     <button type="submit" className="text-center text-white font-semibold text-lg bg-orange-400 w-10/12 rounded-3xl mx-auto p-2 my-2 hover:bg-orange-500 cursor-pointer ">Login</button>
                                 </div>
                             </div>
