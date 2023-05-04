@@ -21,7 +21,7 @@ const Recipe = ({ recipe }) => {
             <h1 className="text-3xl text-center font-bold">Recipe Name: {recipeName}</h1>
             <div className='flex items-center'>
               <div className='flex'>
-              <p className="py-6 font-bold w-11/12">Ingredients : <span className='font-normal'>
+              <p className="py-6 font-bold w-7/12 ml-7">Ingredients : <span className='font-normal'>
                  {ingredients.map((ingredient, index) => (
                    <li key={recipe.id + index}>{ingredient}</li>
                  ))
