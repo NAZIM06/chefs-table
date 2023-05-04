@@ -9,15 +9,16 @@ const ChefRecipe = () => {
     const { chefName, chefPicture, yearsOfExperience, numberOfRecipes,numberOfLikes, shortBio, recipes} = data;
     return (
         <div>
-        <div className='flex justify-between w-full bg-base-200 rounded-xl h-full'>
-            <div className='m-16 w-5/12'>
+            <h1 className="text-center text-3xl font-bold m-10">Chef Details</h1>
+        <div className='flex flex-col justify-around gap-4 lg:flex-row p-4'>
+            <div className='m-16 w-3/5'>
                 <p className='text-2xl font-bold mb-5'>{chefName}</p>
-                <p className='font-semibold'>Years of experience : <span className='font-normal'>{yearsOfExperience} years</span></p>
-                <p className='font-semibold'>Number of Recipes : <span className='font-normal'>{numberOfRecipes} recipes</span></p>
-                <p className='font-semibold'>Bio : <span className='font-normal'>{shortBio}</span></p>
-                <p className='font-semibold flex mt-5 '><AiFillLike className='h-6 w-6 mx-2'/>{numberOfLikes} Likes</p>
+                <p className='font-bold mb-4'>Years of experience : <span className='font-normal'>{yearsOfExperience} years</span></p>
+                <p className='font-bold mb-4'>Number of Recipes : <span className='font-normal'>{numberOfRecipes} recipes</span></p>
+                <p className='font-bold'>Bio : <span className='font-normal'>{shortBio}</span></p>
+                <p className='font-bold flex mt-5 '><AiFillLike className='h-6 w-6 mx-2'/>{numberOfLikes} Likes</p>
             </div>
-            <img className='w-2/6 rounded-r-xl' src={chefPicture} alt="" />
+            <div><img className='w-full object-cover object-center rounded-r-xl' src={chefPicture} alt="" /></div>
         </div>
         <p className='text-3xl font-bold text-center mt-16 mb-10'>{chefName} Recipes</p>
         <div className="grid grid-cols-1 gap-4 my-10">

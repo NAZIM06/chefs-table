@@ -15,10 +15,10 @@ const Recipe = ({ recipe }) => {
         setIsFavorite(!isFavorite);
       };
     return (
-         <div className="hero bg-base-200 rounded-xl">
-        <div className="hero-content flex-row">
+         <div className="">
+        <div className="flex items-center justify-around border rounded-xl shadow-md border-gray-300 my-4 w-11/12 mx-auto p-4">
           <div>
-            <h1 className="text-3xl font-bold">Recipe Name: {recipeName}</h1>
+            <h1 className="text-3xl text-center font-bold">Recipe Name: {recipeName}</h1>
             <div className='flex items-center'>
               <div className='flex'>
               <p className="py-6 font-bold w-11/12">Ingredients : <span className='font-normal'>

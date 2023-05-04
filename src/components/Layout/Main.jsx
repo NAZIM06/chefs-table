@@ -14,7 +14,6 @@ const Main = () => {
                 <Toaster position="top-center"
                     reverseOrder={false} />
             </div>
-            {/* toast.success('Successfully toasted!') */}
 
             <Footer></Footer>
 
