@@ -18,16 +18,16 @@ const Recipe = ({ recipe }) => {
          <div className="hero bg-base-200 rounded-xl">
         <div className="hero-content flex-row">
           <div>
-            <h1 className="text-3xl font-bold">{recipeName}</h1>
+            <h1 className="text-3xl font-bold">Recipe Name: {recipeName}</h1>
             <div className='flex items-center'>
               <div className='flex'>
-              <p className="py-6 font-semibold w-11/12">Ingredients : <span className='font-normal'>
+              <p className="py-6 font-bold w-11/12">Ingredients : <span className='font-normal'>
                  {ingredients.map((ingredient, index) => (
                    <li key={recipe.id + index}>{ingredient}</li>
                  ))
             }</span></p>
-              <p className="py-6 font-semibold w-11/12">Cooking Method: <span className='font-normal'>{cookingMethod.split('\n').map((step, index) => (
-          <li key={index}>{step}</li>
+              <p className="py-6 font-bold w-11/12">Cooking Method: <span className='font-normal '>{cookingMethod.split('\n').map((step, index) => (
+          <li key={index} className='my-2 list-none'>{step}</li>
           ))}</span></p>
               </div>
               <div style={{height: '18vh'}} className='flex flex-col justify-between items-center ml-10'>
@@ -36,7 +36,7 @@ const Recipe = ({ recipe }) => {
         className={`h-6 w-6 ${isFavorite ? 'text-red-600' : 'text-gray-500'}`}
     />
 </button>
-                <p className='flex items-center'>{rating}<FaStar className='h-6 w-6 mx-2 text-btn-color'/></p>
+                <p className='flex items-center'>{rating}<FaStar className='h-6 w-6 mx-2'/></p>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Recipe from './Recipe';
+import { AiFillLike} from "react-icons/ai";
 
 const ChefRecipe = () => {
     const data = useLoaderData();
@@ -14,7 +15,7 @@ const ChefRecipe = () => {
                 <p className='font-semibold'>Years of experience : <span className='font-normal'>{yearsOfExperience} years</span></p>
                 <p className='font-semibold'>Number of Recipes : <span className='font-normal'>{numberOfRecipes} recipes</span></p>
                 <p className='font-semibold'>Bio : <span className='font-normal'>{shortBio}</span></p>
-                <p className='font-semibold'>Likes : <span className='font-normal'>{numberOfLikes}</span></p>
+                <p className='font-semibold flex mt-5 '><AiFillLike className='h-6 w-6 mx-2'/>{numberOfLikes} Likes</p>
             </div>
             <img className='w-2/6 rounded-r-xl' src={chefPicture} alt="" />
         </div>

@@ -9,13 +9,11 @@ const Banner = () => {
       {/* Text Content */}
       <div className='mb-10 lg:max-w-lg  lg:pr-5 lg:mb-0'>
         <div className='max-w-xl mb-6 lg:mt-8'>
-          <div>
-          </div>
-          <h2 className='max-w-lg mb-6 font-sans text-4xl font-bold tracking-tight text-red-600 sm:text-4xl'>
+          <h2 className='max-w-lg mb-6 font-sans lg:text-5xl sm:text-4xl font-bold tracking-tight text-red-600'>
             Meet, Eat<br/> &<br /> 
             <span className='inline-block text-orange-400'>Enjoy The Food</span>
           </h2>
-          <p className='text-base text-gray-700 md:text-lg font-serif'>
+          <p className='text-base text-gray-700  font-serif'>
           Welcome to our restaurant where every dish is made with the freshest ingredients and bursting with flavors that will make your taste buds dance with joy.Come dine with us and experience the magic of our good food for yourself.
           </p>
         </div>
